@@ -1,0 +1,98 @@
+/*
+ * 4. Shadows and Depth Effect Layout
+ * Requirements: Different box-shadows, text-shadow, hover lift, CSS transitions, Flexbox arrangement.
+ */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+/* --- Text Shadow --- */
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 50px;
+    /* Add text-shadow to headings for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+/* --- Flexbox Arrangement --- */
+.card-container {
+    display: flex;
+    /* Arrange cards in a single row */
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* --- Base Card Styling --- */
+.card {
+    width: 250px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    
+    /* CSS transitions for smooth animation */
+    transition: all 0.3s ease-in-out; 
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 0 15px;
+    object-fit: cover;
+}
+
+.card h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* --- Box Shadow Styles --- */
+
+/* Card 1: Subtle Shadow */
+.card-subtle {
+    /* Subtle box-shadow style */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); 
+}
+
+/* Card 2: Medium Shadow */
+.card-medium {
+    /* Medium box-shadow style */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
+}
+
+/* Card 3: Deep Shadow */
+.card-deep {
+    /* Deep box-shadow style */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+}
+
+/* --- Hover Lift Effect --- */
+.card:hover {
+    /* Card should lift up */
+    transform: translateY(-8px); 
+    /* Use a larger shadow on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); 
+}
+
+/* Specific hover effect for the deep card (making it even more dramatic) */
+.card-deep:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustment */
+@media (max-width: 800px) {
+    .card-container {
+        /* Stack cards vertically on smaller screens */
+        flex-direction: column; 
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+    }
+}

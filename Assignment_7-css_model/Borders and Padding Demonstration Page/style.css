@@ -1,0 +1,87 @@
+/*
+ * 1. Borders and Padding Demonstration Page
+ * Requirements: Different border styles, border-radius, padding values, Flexbox alignment, hover transition.
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+}
+
+/* --- Flexbox Alignment --- */
+.container {
+    display: flex;
+    /* Aligns boxes horizontally */
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* --- Base Box Styling --- */
+.box {
+    width: 220px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Smooth transition for hover effect */
+    transition: border-color 0.4s ease, transform 0.4s ease; 
+    text-align: center;
+}
+
+.box h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* --- Border and Padding Styles --- */
+
+/* Box 1: Solid Border & Uniform Padding */
+.box-solid {
+    /* Solid Border Style */
+    border: 5px solid #06b6d4; 
+    /* Uniform padding */
+    padding: 30px; 
+    border-radius: 8px;
+}
+
+/* Box 2: Dashed Border & Different Border Radii */
+.box-dashed {
+    /* Dashed Border Style */
+    border: 5px dashed #f59e0b; 
+    padding: 25px;
+    /* Different border radii */
+    border-radius: 20px 0 20px 0; 
+}
+
+/* Box 3: Double Border & Asymmetrical Padding */
+.box-double {
+    /* Double Border Style */
+    border: 8px double #10b981; 
+    /* Asymmetrical padding (top/bottom, left/right) */
+    padding: 10px 40px; 
+    border-radius: 15px;
+}
+
+/* Box 4: Groove Border & Large Radius */
+.box-groove {
+    /* Groove Border Style */
+    border: 10px groove #ef4444; 
+    padding: 20px;
+    /* Fully rounded corners (circle/oval shape) */
+    border-radius: 50%; 
+}
+
+/* --- Hover Effect --- */
+.box:hover {
+    /* Changes border color with a smooth transition */
+    border-color: #3b82f6; 
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,95 @@
+/*
+ * 7. Typography and Text Styling Page
+ * Requirements: Different font families/weights/sizes, line-height, letter-spacing, text-align,
+ * custom <mark>/<strong>/<em> styles, ::first-letter, ::first-line.
+ */
+
+body {
+    background-color: #f9f9f9;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-area {
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    /* Font family and size for title */
+    font-family: 'Palatino Linotype', Georgia, serif; 
+    font-size: 3em;
+    font-weight: 800;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+h2 {
+    /* Different font family and weight */
+    font-family: Arial, sans-serif; 
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-top: 30px;
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 5px;
+}
+
+p {
+    /* Default text styling for readability */
+    font-family: 'Verdana', sans-serif;
+    font-size: 1rem;
+    /* Line height for readability */
+    line-height: 1.7; 
+    /* Text alignment */
+    text-align: justify; 
+    color: #333;
+    margin-bottom: 1.5em;
+}
+
+/* --- Pseudo-Elements for Emphasis --- */
+
+/* Styles the first letter of the introductory paragraph */
+.intro-paragraph::first-letter { 
+    font-size: 3em;
+    font-weight: bold;
+    color: #d97706;
+    float: left;
+    line-height: 1;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+/* Styles the first line of the spacing demo paragraph */
+.spacing-demo::first-line { 
+    font-weight: bold;
+    color: #059669;
+}
+
+/* --- Custom Inline Element Styling --- */
+
+/* Style <mark> with custom background color */
+mark { 
+    background-color: #fde68a;
+    padding: 0 4px;
+    border-radius: 3px;
+    color: #333;
+}
+
+/* Style <strong> elements */
+strong { 
+    color: #1e3a8a;
+    font-weight: 900;
+}
+
+/* Style <em> elements */
+em { 
+    color: #be185d;
+    font-style: italic;
+    /* Letter spacing for visual effect */
+    letter-spacing: 0.05em; 
+}

@@ -1,0 +1,144 @@
+/*
+ * 5. Advanced CSS Selectors Demonstration
+ * Requirements: Attribute selectors, pseudo-classes, pseudo-elements, combinators, comments explaining each.
+ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8eaf6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #3f51b5;
+    margin-bottom: 30px;
+}
+
+section {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #3f51b5;
+    border-bottom: 2px solid #c5cae9;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------- */
+/* --- 1. ATTRIBUTE SELECTORS --- */
+/* ------------------------------------------------------------------- */
+
+/* Selects all inputs with attribute type="text" */
+input[type="text"] {
+    border: 3px solid #10b981; 
+}
+
+/* Selects all <a> elements whose href starts with "https" */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Selects all elements with a title attribute containing the word "demo" */
+a[title*="demo"] {
+    border-bottom: 1px dotted blue;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- 2. PSEUDO-CLASSES --- */
+/* ------------------------------------------------------------------- */
+
+/* Applies style when the <li> is hovered over */
+.list-section li:hover { 
+    background-color: #dbeafe;
+    cursor: pointer;
+}
+
+/* Applies style when the input field is focused (clicked/tabbed into) */
+.form-section input:focus { 
+    background-color: #fffde7;
+    border-color: #f59e0b;
+    outline: none;
+}
+
+/* Selects the third child element of the <ul> */
+.list-section ul li:nth-child(3) { 
+    font-style: italic;
+    color: #ef4444;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- 3. PSEUDO-ELEMENTS --- */
+/* ------------------------------------------------------------------- */
+
+/* Adds content before every <li> element */
+.list-section ul li::before { 
+    content: "-> ";
+    color: #3f51b5;
+    font-weight: bold;
+}
+
+/* Adds content after the second item */
+.list-section .special::after { 
+    content: " [SPECIAL]";
+    color: #3f51b5;
+    font-size: 0.8em;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- 4. COMBINATORS --- */
+/* ------------------------------------------------------------------- */
+
+/* Descendant Combinator: Selects all 'a' elements inside 'nav' */
+/* (Not shown in HTML, but this is the general use) */
+/* nav a { color: black; } */
+
+/* Child Combinator: Selects only immediate 'li' children of 'ul' */
+.list-section ul > li { 
+    list-style: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Adjacent Sibling Combinator: Selects the paragraph immediately following the ul */
+.list-section ul + p { 
+    margin-top: 20px;
+    font-weight: bold;
+    color: #f59e0b;
+}
+
+/* General Sibling Combinator: Selects all subsequent sibling paragraphs after the ul */
+.list-section ul ~ p { 
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+/* General Styling */
+.form-section input, .form-section button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-section .links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}

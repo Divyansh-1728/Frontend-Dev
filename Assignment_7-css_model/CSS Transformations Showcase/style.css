@@ -1,0 +1,82 @@
+/*
+ * 6. CSS Transformations Showcase
+ * Requirements: rotate, scale, translate, skew, activate on hover, transition, Flexbox horizontal.
+ */
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f0f7ff;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #0f4c75;
+    margin-bottom: 50px;
+}
+
+/* --- Flexbox Alignment --- */
+.container {
+    display: flex;
+    /* Arrange boxes horizontally */
+    justify-content: center; 
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.demo-wrapper {
+    text-align: center;
+}
+
+.demo-wrapper p {
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- Base Box Styling --- */
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+
+    /* Transition for all transformations on hover */
+    transition: all 0.4s ease; 
+}
+
+/* --- Transformation Effects on Hover --- */
+
+/* Box 1: Rotate */
+.box-rotate:hover {
+    /* rotate() transformation */
+    transform: rotate(45deg); 
+    background-color: #1abc9c;
+}
+
+/* Box 2: Scale */
+.box-scale:hover {
+    /* scale() transformation */
+    transform: scale(1.2); 
+    background-color: #f1c40f;
+}
+
+/* Box 3: Translate */
+.box-translate:hover {
+    /* translate() transformation */
+    transform: translateY(-30px); 
+    background-color: #9b59b6;
+}
+
+/* Box 4: Skew */
+.box-skew:hover {
+    /* skew() transformation */
+    transform: skewX(15deg); 
+    background-color: #e74c3c;
+}

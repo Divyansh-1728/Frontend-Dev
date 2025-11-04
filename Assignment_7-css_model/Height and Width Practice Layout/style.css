@@ -1,0 +1,92 @@
+/*
+ * 2. Height and Width Practice Layout
+ * Requirements: Different units (px, %, vh, em), min/max properties, overflow property, centered with Flexbox.
+ */
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #27ae60;
+    margin-bottom: 40px;
+}
+
+/* --- Flexbox Centering --- */
+.center-container {
+    /* Set container to full viewport height */
+    min-height: 100vh; 
+    display: flex;
+    /* Centers boxes horizontally */
+    justify-content: center; 
+    /* Centers boxes vertically */
+    align-items: center; 
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* --- Base Box Styling --- */
+.box {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.box h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+}
+
+/* --- Box 1: Pixels and Overflow --- */
+.box-px {
+    /* Fixed pixel dimensions */
+    width: 250px; 
+    height: 150px; 
+    background-color: #e74c3c; /* Red */
+    
+    /* Demonstrates overflow property */
+    overflow: scroll; 
+}
+
+/* --- Box 2: Percentage and Viewport Height (vh) --- */
+.box-perc-vh {
+    /* Width is 50% of the parent container's width */
+    width: 50%; 
+    /* Height is 20% of the viewport height */
+    height: 20vh; 
+    background-color: #3498db; /* Blue */
+    /* Ensure content is readable */
+    overflow: auto; 
+}
+
+/* --- Box 3: Em and Min/Max Constraints --- */
+.box-em-minmax {
+    /* Width relative to the font size */
+    width: 15em; 
+    background-color: #f1c40f; /* Yellow */
+    color: #333;
+    
+    /* Min-height property */
+    min-height: 200px; 
+    /* Max-width property */
+    max-width: 300px; 
+    overflow: auto;
+}
+
+/* Adjusting Box 2's parent width to demonstrate % width effectively */
+@media (min-width: 768px) {
+    .center-container {
+        /* Gives Box 2 a non-100% width parent to calculate 50% from */
+        max-width: 800px; 
+        border: 2px dashed #ccc;
+    }
+}

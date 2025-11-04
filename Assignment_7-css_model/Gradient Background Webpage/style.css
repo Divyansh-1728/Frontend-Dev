@@ -1,0 +1,81 @@
+/*
+ * 3. Gradient Background Webpage
+ * Requirements: Linear gradient, Radial gradient, Fixed header/footer, parallax (background-attachment: fixed).
+ */
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    min-height: 200vh; /* Ensures scrolling is possible for fixed header/footer demo */
+    background-color: #f7f7f7;
+}
+
+/* --- Fixed Header and Footer --- */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+    /* Fixed header */
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+main {
+    padding-top: 60px; /* Space for fixed header */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+    /* Fixed footer (optional, but completes the structure) */
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* --- Base Section Styling --- */
+section {
+    min-height: 50vh;
+    padding: 80px 5%;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+/* --- Section 1: Linear Gradient --- */
+.linear-section {
+    /* Linear gradient background */
+    background: linear-gradient(to bottom right, #1e3a8a, #60a5fa); 
+}
+
+/* --- Section 2: Radial Gradient and Parallax --- */
+.radial-section {
+    background-image: url('https://placehold.co/1200x800/273746/fff?text=Background+Image');
+    background-size: cover;
+    background-position: center;
+    
+    /* Radial gradient overlay */
+    background-image: 
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%),
+        url('https://placehold.co/1200x800/273746/fff?text=Background+Image');
+
+    /* Parallax effect */
+    background-attachment: fixed; 
+}
+
+/* --- Normal Section --- */
+.normal-section {
+    background-color: #4CAF50; /* Standard color */
+}

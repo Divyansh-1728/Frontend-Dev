@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Advanced CSS Selectors Demonstration</title>
+    <link rel="stylesheet" href="05_selectors.css">
+</head>
+<body>
+
+    <h1>Advanced CSS Selectors</h1>
+
+    <!-- List for pseudo-classes, pseudo-elements, and combinators -->
+    <section class="list-section">
+        <h2>List Styling</h2>
+        <ul>
+            <!-- ::before and :nth-child demo -->
+            <li>First List Item</li> 
+            <li class="special">Second Special Item</li>
+            <li>Third Item (Targeted by ~)</li>
+            <li>Fourth Item</li>
+            <!-- Item for :hover demonstration -->
+            <li>Fifth Hover Item</li> 
+        </ul>
+        <p class="explanation">This paragraph is a sibling ( + ) to the ul and a descendant of the section.</p>
+        <p>This is a second sibling paragraph (~)</p>
+    </section>
+
+    <!-- Form for attribute and :focus demo -->
+    <section class="form-section">
+        <h2>Form Selectors</h2>
+        <form>
+            <input type="text" placeholder="[type='text'] selector">
+            <input type="password" placeholder="Password (different type)">
+            <button class="btn">Submit</button>
+        </form>
+        
+        <!-- Links for attribute selectors -->
+        <div class="links">
+            <a href="https://google.com">Secure Link (https^)</a>
+            <a href="http://insecure.net">Insecure Link (http)</a>
+            <a href="/local/path.html">Local Link</a>
+        </div>
+    </section>
+
+</body>
+</html>
