@@ -1,0 +1,17 @@
+/* Custom CSS for Question 8 */
+
+.pricing-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    /* Use Bootstrap's shadow-lg class */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important; 
+    transform: translateY(-8px); /* Lift effect */
+}
+
+/* Ensure the highlighted card has a bold lift effect */
+.bg-primary.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem rgba(25, 135, 84, 0.4) !important; /* Adjust shadow color for primary */
+}

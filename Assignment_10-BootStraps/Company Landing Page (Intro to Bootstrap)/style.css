@@ -1,0 +1,12 @@
+/* Custom CSS for Question 1 */
+/* This file is kept minimal as Bootstrap handles structure and coloring */
+
+/* Optional: Ensure body uses modern font stack */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Optional: Slight shadow adjustment */
+.shadow-lg {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+}

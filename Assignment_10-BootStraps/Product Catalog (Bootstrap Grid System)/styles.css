@@ -1,0 +1,16 @@
+/* Custom CSS for Question 3 */
+/* Used for hover effects using shadow and transition */
+
+.product-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important; /* Enhanced shadow */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}

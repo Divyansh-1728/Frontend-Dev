@@ -1,0 +1,33 @@
+/* Custom CSS for Question 5 */
+/* Overrides Bootstrap's theme variables */
+
+:root {
+    /* Override primary color (Default is blue) to a custom dark teal */
+    --bs-primary: #3e7d5d;
+    /* Override secondary color (Default is gray) to a custom light blue */
+    --bs-secondary: #185a9d; 
+    /* Override font family */
+    --bs-font-sans-serif: 'Montserrat', sans-serif;
+}
+
+/* Recompile/Recalculate Bootstrap styles using the new variables */
+/* This ensures all elements using Bootstrap's $primary or $secondary variables 
+   (like bg-primary, btn-secondary, text-primary, etc.) use the new colors. */
+.bg-primary { background-color: var(--bs-primary) !important; }
+.text-primary { color: var(--bs-primary) !important; }
+.btn-primary { background-color: var(--bs-primary) !important; border-color: var(--bs-primary) !important; }
+
+.bg-secondary { background-color: var(--bs-secondary) !important; }
+.text-secondary { color: var(--bs-secondary) !important; }
+.btn-secondary { background-color: var(--bs-secondary) !important; border-color: var(--bs-secondary) !important; }
+
+/* Ensure all elements use the Google Font */
+body {
+    font-family: var(--bs-font-sans-serif);
+}
+
+/* Optional hover styles */
+.btn-primary:hover {
+    background-color: #2b5d44 !important;
+    border-color: #2b5d44 !important;
+}
