@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="Responsive_CSS_Cheat_Sheet.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive CSS Cheat Sheet</h1>
+        <p>Key concepts for building adaptive layouts.</p>
+    </header>
+    
+    <main class="container">
+        
+        <section class="cheat-sheet-grid">
+            
+            <div class="sheet-box box-1">
+                <h2>Media Queries</h2>
+                <p class="term-example">@media (max-width: 700px) { ... }</p>
+                <p>The fundamental RWD tool. Applies styles based on device characteristics like screen width.</p>
+            </div>
+
+            <div class="sheet-box box-2">
+                <h2>Fluid Layouts</h2>
+                <p class="term-example">width: 100%; / max-width: 100%;</p>
+                <p>Using relative units (%, vw) ensures containers expand and contract with the viewport.</p>
+            </div>
+            
+            <div class="sheet-box box-3">
+                <h2>Flexbox</h2>
+                <p class="term-example">display: flex; flex-wrap: wrap;</p>
+                <p>Ideal for arranging small groups of items, distributing space, and easy vertical centering.</p>
+            </div>
+            
+            <div class="sheet-box box-4">
+                <h2>CSS Grid</h2>
+                <p class="term-example">grid-template-columns: 1fr 1fr;</p>
+                <p>Designed for two-dimensional layout control, perfect for defining major page areas.</p>
+            </div>
+            
+            <div class="sheet-box box-5">
+                <h2>Responsive Images</h2>
+                <p class="term-example">max-width: 100%; height: auto;</p>
+                <p>Ensures images never exceed their container size, preventing horizontal scrolling.</p>
+            </div>
+            
+            <div class="sheet-box box-6">
+                <h2>Typography</h2>
+                <p class="term-example">font-size: clamp(1rem, 3vw, 2rem);</p>
+                <p>Using relative units (em, rem) and clamp() to ensure text readability across sizes.</p>
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer>
+        <p>Responsive CSS Summary.</p>
+    </footer>
+</body>
+</html>

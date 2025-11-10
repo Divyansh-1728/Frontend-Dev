@@ -1,0 +1,54 @@
+/* Base Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Centering the content */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.text-section {
+    max-width: 900px;
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    text-align: center; /* Requirement: Align text centrally */
+}
+
+/* --- Responsive Typography (Requirement) --- */
+/* H1: Min 1.5rem, Fluid 4vw, Max 3rem */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem); 
+    color: #5d6d7e;
+    margin-bottom: clamp(1rem, 2vw, 2rem); /* Balanced margins */
+    line-height: 1.2;
+}
+
+/* P: Min 1rem, Fluid 2vw, Max 1.5rem */
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0 clamp(10px, 3vw, 40px); /* Balanced padding */
+    margin-bottom: 1rem;
+}
+
+/* --- Responsive Adjustments below 700px --- */
+@media (max-width: 700px) {
+    p {
+        /* Adjust line-height and spacing for smaller screens */
+        line-height: 1.8; /* Increase line height for better mobile readability */
+        text-align: left; /* Shift alignment for narrow column readability */
+    }
+    .text-section {
+        padding: 30px 15px;
+    }
+}

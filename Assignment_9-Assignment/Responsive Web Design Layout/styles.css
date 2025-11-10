@@ -1,0 +1,109 @@
+/* Base Styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Needed for sticky footer */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1; /* Allows main content to push footer down */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+/* --- Header (Flexbox) --- */
+.main-header {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between; /* Requirement: Logo left, Nav right */
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #17a2b8;
+}
+
+/* --- Feature Boxes (Flexbox) --- */
+.feature-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.feature-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-basis: 30%; /* Allocates space for 3 boxes horizontally */
+    transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+/* Hover Effect Requirement */
+.feature-box:hover {
+    transform: scale(1.05); /* Scales up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.box-1 { border-bottom: 5px solid #007bff; }
+.box-2 { border-bottom: 5px solid #28a745; }
+.box-3 { border-bottom: 5px solid #ffc107; }
+
+.feature-box h2 {
+    color: #343a40;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #343a40;
+    color: #bbb;
+    padding: 15px;
+    text-align: center; /* Requirement: Centered at the bottom */
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* --- Responsive Behavior --- */
+@media (max-width: 750px) {
+    .main-header {
+        flex-direction: column;
+    }
+    .main-nav {
+        margin-top: 15px;
+    }
+    
+    /* Requirement: Feature boxes should stack vertically */
+    .feature-boxes {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .feature-box {
+        flex-basis: auto; /* Reset basis when stacking */
+    }
+}
