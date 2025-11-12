@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marks Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Marks Analyzer</h2>
+        <form id="marksForm">
+            <div class="form-group">
+                <label for="mark1">Subject 1:</label>
+                <input type="number" id="mark1" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="mark2">Subject 2:</label>
+                <input type="number" id="mark2" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="mark3">Subject 3:</label>
+                <input type="number" id="mark3" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="mark4">Subject 4:</label>
+                <input type="number" id="mark4" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="mark5">Subject 5:</label>
+                <input type="number" id="mark5" min="0" max="100" required>
+            </div>
+            <button type="button" onclick="analyzeMarks()">Analyze</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
