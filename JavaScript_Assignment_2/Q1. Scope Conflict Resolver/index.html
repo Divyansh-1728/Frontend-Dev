@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Scope Conflict Resolver</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Scope Conflict Resolver</h2>
+        <div class="form-group">
+            <label for="isPermanent">Is Permanent Employee?</label>
+            <select id="isPermanent">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <button onclick="calculateSalary()">Calculate Salary</button>
+        <div class="result" id="result"></div>
+        <div class="note">
+            <p>Note: Global bonus is always <strong>₹5000</strong> and does not change.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
